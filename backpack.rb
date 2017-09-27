@@ -16,20 +16,6 @@ class Backpack
 
     check_weather(x)
 
-    # Ensure appropriate clothing is added to backpack
-    if x == 'rainy'
-      @items << 'pants'
-      @items << 'shirt'
-      @items << 'umbrella'
-    elsif x == 'cold'
-      @items << 'pants'
-      @items << 'shirt'
-      @items << 'jacket'
-    else
-      @items << 'pants'
-      @items << 'shirt'
-    end
-
     # Ensure gym shoes are added to backpack if it's a gym day
     # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
     if day_of_week == 'monday' || day_of_week == 'thursday'
@@ -46,7 +32,21 @@ class Backpack
     end
   end
 
-  def check_weather(weather)
+  def check_weather(x)
+    # Ensure appropriate clothing is added to backpack
+    if x == 'rainy'
+      @items << 'pants'
+      @items << 'shirt'
+      @items << 'umbrella'
+    elsif x == 'cold'
+      @items << 'pants'
+      @items << 'shirt'
+      @items << 'jacket'
+    else
+      @items << 'pants'
+      @items << 'shirt'
+    end
+    @items
   end
 
 
