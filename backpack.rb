@@ -10,21 +10,18 @@ class Backpack
   end
 
   def prepare_to_leave_the_house
-    # set up local variables used by rest of prepare method
     x = @attributes[:weather]
     day_of_week = @attributes[:day_of_week]
 
     check_weather(x)
     check_day_of_the_week(day_of_week)
 
-    # Bring a packed lunch on all weekdays
     if day_of_week != 'saturday' && day_of_week != 'sunday'
       @items << 'packed lunch'
     end
   end
 
   def check_weather(x)
-    # Ensure appropriate clothing is added to backpack
     if x == 'rainy'
       @items << 'pants'
       @items << 'shirt'
@@ -44,7 +41,6 @@ class Backpack
     # Ensure gym shoes are added to backpack if it's a gym day
     # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
     if day_of_week == 'monday' || day_of_week == 'thursday'
-      #add gym shoes to items
       @items << 'gym shoes'
     end
   end
