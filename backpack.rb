@@ -14,6 +14,8 @@ class Backpack
     x = @attributes[:weather]
     day_of_week = @attributes[:day_of_week]
 
+    check_weather(x)
+
     # Ensure appropriate clothing is added to backpack
     if x == 'rainy'
       @items << 'pants'
@@ -44,7 +46,7 @@ class Backpack
     end
   end
 
-  def check_weather
+  def check_weather(weather)
   end
 
 
