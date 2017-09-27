@@ -17,13 +17,6 @@ class Backpack
     check_weather(x)
     check_day_of_the_week(day_of_week)
 
-    # Ensure gym shoes are added to backpack if it's a gym day
-    # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
-    if day_of_week == 'monday' || day_of_week == 'thursday'
-      #add gym shoes to items
-      @items << 'gym shoes'
-    end
-
     # Bring a packed lunch on all weekdays
     if day_of_week != 'saturday' && day_of_week != 'sunday'
       @items << 'packed lunch'
@@ -51,6 +44,12 @@ class Backpack
   end
 
   def check_day_of_the_week(day_of_week)
+    # Ensure gym shoes are added to backpack if it's a gym day
+    # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
+    if day_of_week == 'monday' || day_of_week == 'thursday'
+      #add gym shoes to items
+      @items << 'gym shoes'
+    end
   end
 
   # Prints a summary packing list for Melinda's backpack
