@@ -15,7 +15,7 @@ class Backpack
     day_of_week = @attributes[:day_of_week]
 
     check_weather(x)
-
+    check_day_of_the_week(day_of_week)
 
     # Ensure gym shoes are added to backpack if it's a gym day
     # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
@@ -50,7 +50,7 @@ class Backpack
     @items
   end
 
-  def check_day_of_the_week
+  def check_day_of_the_week(day_of_week)
   end
 
   # Prints a summary packing list for Melinda's backpack
