@@ -44,6 +44,10 @@ class Backpack
     end
   end
 
+  def check_weather
+  end
+
+
   # Prints a summary packing list for Melinda's backpack
   def display_list_of_items_packed
     output = []
